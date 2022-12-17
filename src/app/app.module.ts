@@ -13,11 +13,13 @@ import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button'
 
 import { ProductSearchComponent } from './components/product-search/product-search.component';
+import { UniversitiesSearchComponent } from './components/universities-search/universities-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductSearchComponent
+    ProductSearchComponent,
+    UniversitiesSearchComponent
   ],
   imports: [
     BrowserModule,

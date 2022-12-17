@@ -1,0 +1,13 @@
+<section [formGroup]="searchForm">
+<mat-form-field appearance="fill">
+    <mat-label>Country</mat-label>
+    <input matInput type="text" formControlName="country">
+</mat-form-field>
+</section>
+<section></section>
+<ng-template #empty>
+  <p>Type any valid country in a searchbox above</p>
+</ng-template>
+<ng-template #notFound>
+  <p>Did not find any universities for this country! :(</p>
+</ng-template>
