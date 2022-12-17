@@ -34,7 +34,7 @@ export class ProductSearchComponent implements OnInit {
       this.prodSearch,
     ]).pipe(
       map(([products, searchstr]: [Product[], string]) =>
-        products.filter((product) => product.title.startsWith(searchstr))
+        searchstr.length?products.filter((product) => product.title.startsWith(searchstr)):[]
       ),
       shareReplay()      
     );
