@@ -1,0 +1,17 @@
+<section class="tickers">
+<mat-chip-list>
+    <mat-chip *ngFor="let chip of selectedCryptos$ | async">{{chip}}</mat-chip>
+</mat-chip-list>
+</section>
+
+<section class="search" [formGroup]="searchFormGroup">
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Search for crypto</mat-label>
+        <input matInput type="text" formControlName="cryptoName" [matAutocomplete]="auto">
+    </mat-form-field>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onCryptoSelect($event)">
+        <mat-option *ngFor="let item of filteredCryptos$ | async" [value]="item.symbol">{{item.symbol}}</mat-option>
+    </mat-autocomplete>
+
+</section>

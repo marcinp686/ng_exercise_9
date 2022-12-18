@@ -11,15 +11,19 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatListModule } from '@angular/material/list'
 import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button'
+import { MatAutocompleteModule } from '@angular/material/autocomplete'
+import { MatChipsModule } from '@angular/material/chips'
 
 import { ProductSearchComponent } from './components/product-search/product-search.component';
 import { UniversitiesSearchComponent } from './components/universities-search/universities-search.component';
+import { CryptoAutocompleteComponent } from './components/crypto-autocomplete/crypto-autocomplete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductSearchComponent,
-    UniversitiesSearchComponent
+    UniversitiesSearchComponent,
+    CryptoAutocompleteComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import { UniversitiesSearchComponent } from './components/universities-search/un
     MatFormFieldModule,
     MatListModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatAutocompleteModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
