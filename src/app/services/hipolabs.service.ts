@@ -11,6 +11,6 @@ export class HipolabsService {
   constructor(private httpClient: HttpClient) { }
 
   getUniversities(country: string) : Observable<University[]> {
-    return this.httpClient.get<University[]>('http://universities.hipolabs.com/search?country=${country}');
+    return this.httpClient.get<University[]>(`http://universities.hipolabs.com/search?country=${country}`);
   }
 }
